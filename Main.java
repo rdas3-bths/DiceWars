@@ -1,15 +1,18 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to Dice Wars");
-
         int goal = DiceWars.getGoal();
-
         System.out.println("Goal is: " + goal);
-
         boolean playerCheck = false;
 
+        Scanner s = new Scanner(System.in);
+
         while (!playerCheck) {
+            System.out.print("Press Enter to roll!");
+            s.nextLine();
             playerCheck = DiceWars.playerRoll(goal);
             if (playerCheck) {
                 System.out.println("Player roll wins!");
